@@ -28,13 +28,11 @@ export default class MyExtension extends Extension {
                 const [success, stdout, stderr] = proc.communicate_utf8(null, null);
                 if (proc.get_successful()) {
                     if (stdout.includes('off')) {
-                        this.gsettings?.set_boolean('beast-mode', false);
-                        Main.notify('Beastmode', 'disabled');
+                        this.gsettings?.get_boolean('notification') && Main.notify('Beastmode', 'disabled');
                         this.menu?.remove_child(happybtn);
                         this.menu?.add_child(sadbtn);
                     } else {
-                        this.gsettings?.set_boolean('beast-mode', true);
-                        Main.notify('Beastmode', 'enabled');
+                        this.gsettings?.get_boolean('notification') && Main.notify('Beastmode', 'enabled');
                         this.menu?.remove_child(sadbtn);
                         this.menu?.add_child(happybtn);
                     }

@@ -13,21 +13,21 @@ export default class GnomeRectanglePreferences extends ExtensionPreferences {
             iconName: 'dialog-information-symbolic',
         });
 
-        const animationGroup = new Adw.PreferencesGroup({
-            title: _('Beast Mode'),
-            description: _('enable fan full speed'),
+        const settingsGroup = new Adw.PreferencesGroup({
+            title: _('Settings'),
+            description: _('Settings for the extension'),
         });
-        page.add(animationGroup);
+        page.add(settingsGroup);
 
-        const animationEnabled = new Adw.SwitchRow({
-            title: _('Full Speed'),
-            subtitle: _('Enable or disable full speed'),
+        const notificationsToggle = new Adw.SwitchRow({
+            title: _('Notification Toggle'),
+            subtitle: _('Enable or disable notifications indicator'),
         });
-        animationGroup.add(animationEnabled);
+        settingsGroup.add(notificationsToggle);
 
         window.add(page)
 
-        this._settings!.bind('beast-mode', animationEnabled, 'active', Gio.SettingsBindFlags.DEFAULT);
+        this._settings!.bind('notification', notificationsToggle, 'active', Gio.SettingsBindFlags.DEFAULT);
 
         return Promise.resolve();
     }

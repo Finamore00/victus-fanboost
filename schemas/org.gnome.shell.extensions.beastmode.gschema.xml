@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<schemalist>
+  <schema id="org.gnome.shell.extensions.beastmode" path="/org/gnome/shell/extensions/beastmode/">
+    <key name="beast-mode" type="b">
+      <default>false</default>
+      <summary>Beast Mode</summary>
+      <description>Ramp up fan to max speed</description>
+    </key>
+  </schema>
+</schemalist>

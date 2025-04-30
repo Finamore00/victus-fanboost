@@ -1,0 +1,27 @@
+{
+	"name": "my-extension",
+	"version": "0.0.0",
+	"description": "A TypeScript GNOME Extension",
+	"type": "module",
+	"private": true,
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/example/my-extension.git"
+	},
+	"author": "Álan Crístoffer e Sousa <acristoffers@startmail.com>",
+	"license": "LGPL-3.0-or-later",
+	"bugs": {
+		"url": "https://github.com/example/my-extension/issues"
+	},
+	"homepage": "https://github.com/example/my-extension#readme",
+	"sideEffects": false,
+	"devDependencies": {
+		"eslint": "^9.25.1",
+		"eslint-plugin-jsdoc": "^50.6.11",
+		"typescript": "^5.8.3"
+	},
+	"dependencies": {
+		"@girs/gjs": "^4.0.0-beta.23",
+		"@girs/gnome-shell": "^48.0.2"
+	}
+}

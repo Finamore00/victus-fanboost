@@ -1,0 +1,8 @@
+{
+	"name": "Beast Mode",
+	"description": "An extension to enable full fan speed on Hp Victus laptops",
+	"uuid": "beastmode@sam",
+	"url": "https://github.com/example/beastmode",
+	"settings-schema": "org.gnome.shell.extensions.beastmode",
+	"shell-version": ["46"]
+}

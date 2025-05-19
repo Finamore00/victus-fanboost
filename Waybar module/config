@@ -1,0 +1,5 @@
+"custom/fan": {
+        "format": "󰈐",
+        "tooltip-format": "Fan Boost",
+        "on-click": "kitty -e bash ~/<path to fanboost script>/fanboost.sh"
+    }

@@ -4,6 +4,6 @@
 # script through pkexec. Written to have an easier time
 # defining polkit actions and rules.
 
-INSTALL_DIR=$(pwd)
+INSTALL_DIR=$(dirname $(realpath "$0"))
 
 pkexec $INSTALL_DIR/fanboost.sh
